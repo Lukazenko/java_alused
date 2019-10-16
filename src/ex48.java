@@ -5,7 +5,7 @@ public class ex48 {
         Scanner reader = new Scanner(System.in);
         System.out.print("Type your name: ");
         String name = reader.nextLine();
-        System.out.print("First characters: " + name.charAt(0));
+        System.out.print("First character: " + name.charAt(0));
 
     }
 }
