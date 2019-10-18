@@ -21,8 +21,6 @@ public class ex70 {
 
     private static void combine(ArrayList<Integer> first, ArrayList<Integer> second) {
 
-
-
         first.addAll(second);
 
     }
