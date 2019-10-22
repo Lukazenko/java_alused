@@ -19,6 +19,7 @@ public class ex78d {
         hours.setValue(h);
 
         int i = 0;
+
         while ( i < 121) {
             System.out.println( hours + ":" + minutes + ":" + seconds);   // the current time printed
             // advance seconds
