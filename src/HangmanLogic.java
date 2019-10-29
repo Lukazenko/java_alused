@@ -23,9 +23,7 @@ class HangmanLogic {
 
     void guessLetter(String letter) {
         // program here the functionality for making a guess
-        int len = this.word.length();
 
-        int i = 0;
 
         if(!this.word.contains(letter) && !guessedLetters.contains(letter)){
             numberOfFaults += 1;
@@ -40,7 +38,7 @@ class HangmanLogic {
         // the letter is added among the already guessed letters
     }
 
-    public String hiddenWord() {
+    String hiddenWord() {
         // program here the functionality for building the hidden word
 
         // create the hidden word by iterating through this.word letter by letter
@@ -49,6 +47,20 @@ class HangmanLogic {
 
         // return the hidden word at the end
 
-        return "";
+        String hidden = "";
+        int i = 0;
+        while(i < word.length()){
+            String letter = "" + word.charAt(i);
+
+            if(guessedLetters.contains(letter)){
+                hidden += word.charAt(i);
+            } else {
+                hidden += "_";
+            }
+
+            i++;
+        }
+
+        return hidden;
     }
 }
