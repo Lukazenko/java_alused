@@ -9,10 +9,14 @@ class Apartment {
         this.pricePerSquareMeter = pricePerSquareMeter;
     }
     boolean larger(Apartment otherApartment){
-        if(this.squareMeters > otherApartment.squareMeters){
-            return true;
-        } else {
-            return false;
+        return this.squareMeters > otherApartment.squareMeters;
+    }
+
+    int priceDifference(Apartment otherApartment){
+        int dif = (otherApartment.squareMeters * otherApartment.pricePerSquareMeter) - (this.squareMeters * this.pricePerSquareMeter);
+        if(dif < 0){
+            dif = dif * (-1);
         }
+        return dif;
     }
 }
