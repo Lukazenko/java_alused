@@ -19,4 +19,8 @@ class Apartment {
         }
         return dif;
     }
+
+    boolean moreExpensiveThan(Apartment otherApartment){
+        return (otherApartment.squareMeters * otherApartment.pricePerSquareMeter) < (this.squareMeters * this.pricePerSquareMeter);
+    }
 }
