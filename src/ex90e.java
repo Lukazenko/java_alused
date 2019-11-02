@@ -9,5 +9,6 @@ public class ex90e {
         barcelona.addPlayer(new Player("Mikael", 1)); // works similarly as the above
 
         System.out.println("Total goals: " + barcelona.goals());
+
     }
 }

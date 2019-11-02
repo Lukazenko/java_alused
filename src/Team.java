@@ -38,5 +38,16 @@ class Team {
         return list.size();
     }
 
+    int goals(){
+        int i = 0;
+        for(Player asd : list){
+            i += asd.goals();
+
+        }
+
+        return i;
+
+    }
+
 
 }
