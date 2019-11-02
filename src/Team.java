@@ -3,6 +3,7 @@ import java.util.ArrayList;
 class Team {
     private String name;
     private ArrayList<Player> list;
+    private int max = 16;
 
     Team(String name){
         this.name = name;
@@ -14,7 +15,10 @@ class Team {
     }
 
     void addPlayer(Player player){
-        list.add(player);
+        if(list.size() < max){
+            list.add(player);
+        }
+
 
     }
 
@@ -24,4 +28,15 @@ class Team {
         }
 
     }
+
+    void setMaxSize(int maxSize){
+        max = maxSize;
+
+    }
+
+    int size(){
+        return list.size();
+    }
+
+
 }
