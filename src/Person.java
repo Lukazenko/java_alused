@@ -50,7 +50,7 @@ public class Person {
         return this.weight;
     }
 
-    public void setWeight(int weight) {
+    void setWeight(int weight) {
         this.weight = weight;
     }
 
