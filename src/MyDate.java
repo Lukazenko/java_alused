@@ -25,12 +25,8 @@ public class MyDate {
         }
 
         // years and months the same, we'll compare the days
-        if ( this.year == compared.year && this.month == compared.month &&
-                this.day < compared.day ) {
-            return true;
-        }
-
-        return false;
+        return this.year == compared.year && this.month == compared.month &&
+                this.day < compared.day;
     }
 
     private void advance(){
@@ -71,5 +67,9 @@ public class MyDate {
 
 
         return newMyDate;
+    }
+
+    int differenceInYears(MyDate comparedDate){
+        return year - comparedDate.year;
     }
 }
