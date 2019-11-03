@@ -5,5 +5,6 @@ public class ex93c {
 
         System.out.println( pekka );
         System.out.println( steve );
+
     }
 }

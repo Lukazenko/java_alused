@@ -8,6 +8,25 @@ class Person2 {
         this.name = name;
         this.birthday = new MyDate(pp, kk, vv);
     }
+    Person2(String name, MyDate birthday){
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    Person2(String name){
+        // Calendar.getInstance().get(Calendar.DATE);
+        int date = Calendar.getInstance().get(Calendar.DATE);
+        // Calendar.getInstance().get(Calendar.MONTH) + 1; // January is 0 so we add one
+        int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        // Calendar.getInstance().get(Calendar.YEAR);
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+
+        this.birthday = new MyDate(date, month, year);
+        this.name = name;
+
+
+
+    }
 
     int age() {
         // calculate the age based on the birthday and the current day
