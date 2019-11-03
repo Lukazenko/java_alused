@@ -70,29 +70,16 @@ public class MyDate {
     }
 
     int differenceInYears(MyDate comparedDate){
+        double diff = 0.00;
+        double days = (double) day / 365 + (double) month / 12 + year;
+        double days2 = (double) comparedDate.day / 365 + (double) comparedDate.month / 12 + comparedDate.year;
 
-        int diff_day = comparedDate.day - day; //23
-        int diff_month = comparedDate.month - month; //11
-        int diff_year = 0;
-
-        if(diff_day < 0){
-            diff_day = diff_day * -1;
-        }
-        if(diff_month < 0){
-            diff_month = diff_month * -1;
-        }
-
-
-        if(diff_month < 12 && diff_day < 30){
-            diff_year = year - comparedDate.year;
-            diff_year -= 1;
-
+        if(year > comparedDate.year){
+            diff = days - days2;
         } else {
-            diff_year = year - comparedDate.year;
-
+            diff = days2 - days;
         }
 
-
-        return diff_year;
+        return (int) diff;
     }
 }
