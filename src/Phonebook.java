@@ -19,4 +19,13 @@ class Phonebook {
         }
     }
 
+    String searchNumber(String name){
+        for(Person3 asd : list){
+            if(asd.getName().equals(name)){
+                return asd.getNumber();
+            }
+        }
+        return "number not known";
+    }
+
 }
