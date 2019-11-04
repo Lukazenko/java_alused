@@ -39,7 +39,24 @@ public class Money {
 
     boolean less(Money compared){
 
-
         return euros() < compared.euros;
+    }
+
+    Money minus(Money decremented){
+
+        int cent = -1 * (cents() - decremented.cents);
+        int eur = euros() - decremented.euros;
+
+        if(!(cent == 0)){
+            eur -= 1;
+        }
+
+        if(eur < 0){
+            eur = 0;
+            cent = 0;
+
+        }
+
+        return new Money(eur, cent);
     }
 }
