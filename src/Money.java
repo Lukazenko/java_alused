@@ -17,7 +17,7 @@ public class Money {
         return euros;
     }
 
-    public int cents(){
+    private int cents(){
         return cents;
     }
 
@@ -35,5 +35,11 @@ public class Money {
         int cent = cents() + added.cents;
         return new Money(eur, cent);
 
+    }
+
+    boolean less(Money compared){
+
+
+        return euros() < compared.euros;
     }
 }
