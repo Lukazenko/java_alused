@@ -14,7 +14,7 @@ class NightSky {
 
     }
 
-    public NightSky(int width, int height){
+    NightSky(int width, int height){
         this.density = 0.1;
         this.width = width;
         this.height = height;
@@ -43,11 +43,15 @@ class NightSky {
             }
         }
 
+    }
 
+    void print(){
 
+        for(int i = 0; i < height; i++){
+            printLine();
+            System.out.println();
 
-
-
+        }
 
     }
 }
