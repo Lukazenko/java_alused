@@ -27,7 +27,7 @@ class Library {
 
         // iterate the list of books and add all the matching books to the list found
         for(Book asd : lib){
-            if(asd.title().contains(title)){
+            if(StringUtils.included(asd.title(), title)) {
                 found.add(asd);
             }
         }
@@ -41,7 +41,7 @@ class Library {
 
         // iterate the list of books and add all the matching books to the list found
         for(Book asd : lib){
-            if(asd.publisher().contains(publisher)){
+            if(StringUtils.included(asd.publisher(), publisher)) {
                 found.add(asd);
             }
         }
@@ -64,4 +64,6 @@ class Library {
 
         return found;
     }
+
+
 }
