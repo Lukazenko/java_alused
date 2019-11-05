@@ -4,6 +4,7 @@ class NightSky {
     private double density;
     private int width;
     private int height;
+    private int stars = 0;
 
 
 
@@ -37,6 +38,7 @@ class NightSky {
 
 
             if(num <= 0.1){
+                stars += 1;
                 System.out.print("*");
             } else {
                 System.out.print(" ");
@@ -46,12 +48,16 @@ class NightSky {
     }
 
     void print(){
-
+        stars = 0;
         for(int i = 0; i < height; i++){
             printLine();
             System.out.println();
 
         }
 
+    }
+
+    int starsInLastPrint(){
+        return stars;
     }
 }
