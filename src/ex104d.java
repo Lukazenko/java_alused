@@ -17,15 +17,11 @@ public class ex104d {
     private static void swap(int[] array, int index1, int index2) {
         int one = array[index1];
         int two = array[index2];
+        array[index1] = two;
+        array[index2] = one;
 
-        for(int i = 0; i < array.length; i++){
-            if(i == index1){
-                array[index1] = two;
-            } else if(i == index2){
-                array[index2] = one;
-            }
 
-        }
+
 
 
     }
