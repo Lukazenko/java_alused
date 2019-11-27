@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GuessingGame {
+class GuessingGame {
 
     private Scanner reader;
 
@@ -8,20 +8,27 @@ public class GuessingGame {
         this.reader = new Scanner(System.in);
     }
 
-    public void play(int lowerLimit, int upperLimit) {
-        instructions(upperLimit, lowerLimit);
+    void play(int lowerLimit, int upperLimit) {
+        instructions(lowerLimit, upperLimit);
 
-        // write the game logic here
+        while (lowerLimit < upperLimit) {
+            int avg = average(lowerLimit, upperLimit);
+            if(isGreaterThan(avg)){
+                lowerLimit = avg + 1;
+            } else {
+                upperLimit = avg;
+            }
+        }
+
+        System.out.println("The number you're thinking of is " + lowerLimit);
     }
 
-    int average(int firstNumber, int secondNumber){
-        int average = (firstNumber + secondNumber) / 2;
-        return average;
+    int average(int firstNumber, int secondNumber) {
+        return (firstNumber + secondNumber) / 2;
     }
 
 
-
-    boolean isGreaterThan(int value){
+    boolean isGreaterThan(int value) {
         System.out.println("Is your number greater than " + value + "? (y/n)");
 
         String vastus = reader.nextLine();
