@@ -14,7 +14,12 @@ public class GuessingGame {
         // write the game logic here
     }
 
-    // implement here the methods isGreaterThan and average
+    int average(int firstNumber, int secondNumber){
+        int average = (firstNumber + secondNumber) / 2;
+        return average;
+    }
+
+
 
     boolean isGreaterThan(int value){
         System.out.println("Is your number greater than " + value + "? (y/n)");
