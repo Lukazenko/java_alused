@@ -14,4 +14,8 @@ class Dictionary {
     public void add(String word, String translation){
         dict.put(word, translation);
     }
+
+    int amountOfWords(){
+        return dict.size();
+    }
 }
