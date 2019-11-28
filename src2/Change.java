@@ -9,12 +9,11 @@ class Change {
     }
 
     String change(String characterString){
-        String word = characterString;
 
         String replaced = "";
 
-        for (int i = 0; i < word.length(); i++){
-            char character = word.charAt(i);
+        for (int i = 0; i < characterString.length(); i++){
+            char character = characterString.charAt(i);
             if(character == first_char){
                 replaced += second_char;
             } else {
