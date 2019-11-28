@@ -24,4 +24,10 @@ class Container {
     public String toString(){
         return this.container.size()+ " suitcases " + "(" + this.currentWeight + " kg)";
     }
+
+    void printThings(){
+        for(Suitcase item : container){
+            item.printThings();
+        }
+    }
 }
