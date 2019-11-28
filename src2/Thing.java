@@ -17,6 +17,6 @@ class Thing {
     }
 
     public String toString(){
-        return this.name + "(" + this.weight + " kg)";
+        return this.name + " (" + this.weight + " kg)";
     }
 }

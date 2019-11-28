@@ -44,4 +44,26 @@ class Suitcase {
 
         return things + "(" + this.weight_now + " kg)";
     }
+
+    Thing heaviestThing(){
+
+        int i = 0;
+
+        for(Thing item : things){
+            if(item.getWeight() > i){
+                i = item.getWeight();
+            }
+        }
+
+        String name = "";
+
+        for (Thing item : things){
+            if(i == item.getWeight()){
+                name += item.getName();
+            }
+        }
+
+        return new Thing (name, i);
+
+    }
 }
