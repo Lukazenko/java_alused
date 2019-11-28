@@ -22,6 +22,16 @@ class Suitcase {
     }
 
     public String toString(){
-        return this.things.size() + " things " + "(" + this.weight_now + " kg)";
+        String things = "";
+
+        if(this.things.size() == 0){
+            things += "empty ";
+        } else if(this.things.size() == 1){
+            things += this.things.size() + " thing ";
+        } else {
+            things += this.things.size() + " things ";
+        }
+
+        return things + "(" + this.weight_now + " kg)";
     }
 }
