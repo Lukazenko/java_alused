@@ -21,6 +21,16 @@ class Suitcase {
 
     }
 
+    void printThings(){
+        for(Thing item : things){
+            System.out.println(item.getName() + " (" + item.getWeight() + " kg)");
+        }
+    }
+
+    int totalWeight(){
+        return this.weight_now;
+    }
+
     public String toString(){
         String things = "";
 
