@@ -6,7 +6,7 @@ import java.util.Map;
 class ShoppingBasket {
 
 
-    List<Purchase> basket;
+    private List<Purchase> basket;
     private int price;
     ShoppingBasket(){
         this.basket = new ArrayList<Purchase>();
