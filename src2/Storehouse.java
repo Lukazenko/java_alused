@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Storehouse {
+class Storehouse {
 
     private Map<String, Integer> storagePrice;
     private Map<String, Integer> storageStock;
@@ -11,12 +11,12 @@ public class Storehouse {
         this.storageStock = new HashMap<String, Integer>();
     }
 
-    public void addProduct(String product, int price, int stock){
+    void addProduct(String product, int price, int stock){
         storagePrice.put(product, price);
         storageStock.put(product, stock);
     }
 
-    public int price(String product){
+    int price(String product){
 
         for(String key: storagePrice.keySet()) {
             if(key.equals(product)){
@@ -24,5 +24,23 @@ public class Storehouse {
             }
         }
         return -99;
+    }
+
+    int stock(String product){
+        for(String key: storageStock.keySet()) {
+            if(key.equals(product)){
+                return storageStock.get(key);
+            }
+        }
+        return 0;
+    }
+
+    boolean take(String product){
+        if(storageStock.containsKey(product) && storageStock.get(product) > 0){
+            storageStock.put(product, storageStock.get(product) - 1);
+            return true;
+        } else {
+            return false;
+        }
     }
 }
