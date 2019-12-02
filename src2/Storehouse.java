@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 class Storehouse {
 
@@ -42,5 +43,9 @@ class Storehouse {
         } else {
             return false;
         }
+    }
+
+    Set<String> products(){
+        return storageStock.keySet();
     }
 }
