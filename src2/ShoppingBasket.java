@@ -21,4 +21,10 @@ class ShoppingBasket {
     int price(){
         return this.price;
     }
+
+    public void print(){
+        for(Purchase item : this.basket){
+            System.out.println(item);
+        }
+    }
 }
