@@ -13,6 +13,10 @@ class Purchase {
         return this.unitPrice * this.amount;
     }
 
+    public String name(){
+        return this.product;
+    }
+
     void increaseAmount() {
         this.amount += 1;
 
